@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentEnrollDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClassDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Teacher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="StudentDetails" Relationship="Self.FK_ClassDetail_StudentDetail" FromRole="ClassDetail" ToRole="StudentDetail" />
+  </EntityType>
+  <EntityType Name="StudentDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="GPA" Type="Double" />
+    <Property Name="ClassId" Type="Int32" />
+    <NavigationProperty Name="ClassDetail" Relationship="Self.FK_ClassDetail_StudentDetail" FromRole="StudentDetail" ToRole="ClassDetail" />
+  </EntityType>
+  <Association Name="FK_ClassDetail_StudentDetail">
+    <End Role="ClassDetail" Type="Self.ClassDetail" Multiplicity="0..1" />
+    <End Role="StudentDetail" Type="Self.StudentDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClassDetail">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentDetail">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StudentEnrollDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClassDetails" EntityType="Self.ClassDetail" />
+    <EntitySet Name="StudentDetails" EntityType="Self.StudentDetail" />
+    <AssociationSet Name="FK_ClassDetail_StudentDetail" Association="Self.FK_ClassDetail_StudentDetail">
+      <End Role="ClassDetail" EntitySet="ClassDetails" />
+      <End Role="StudentDetail" EntitySet="StudentDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

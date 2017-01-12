@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentEnrollDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ClassDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="450" />
+    <Property Name="Location" Type="nvarchar(max)" />
+    <Property Name="Teacher" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'StudentEnrollDb.dbo.StudentDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="StudentDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="450" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="450" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="GPA" Type="float" />
+    <Property Name="ClassId" Type="int" />
+  </EntityType>
+  <Association Name="FK_ClassDetail_StudentDetail">
+    <End Role="ClassDetail" Type="Self.ClassDetail" Multiplicity="0..1" />
+    <End Role="StudentDetail" Type="Self.StudentDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClassDetail">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentDetail">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StudentEnrollDbModelStoreContainer">
+    <EntitySet Name="ClassDetail" EntityType="Self.ClassDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentDetail" EntityType="Self.StudentDetail" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ClassDetail_StudentDetail" Association="Self.FK_ClassDetail_StudentDetail">
+      <End Role="ClassDetail" EntitySet="ClassDetail" />
+      <End Role="StudentDetail" EntitySet="StudentDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

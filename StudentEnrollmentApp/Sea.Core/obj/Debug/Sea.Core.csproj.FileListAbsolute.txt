@@ -1,0 +1,9 @@
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\bin\Debug\Sea.Core.dll.config
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\bin\Debug\Sea.Core.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\bin\Debug\Sea.Core.pdb
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\bin\Debug\EntityFramework.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\bin\Debug\EntityFramework.SqlServer.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\bin\Debug\EntityFramework.xml
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\bin\Debug\EntityFramework.SqlServer.xml
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\obj\Debug\Sea.Core.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Core\obj\Debug\Sea.Core.pdb

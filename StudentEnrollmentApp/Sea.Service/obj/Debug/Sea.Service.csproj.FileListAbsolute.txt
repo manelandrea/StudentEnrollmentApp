@@ -1,0 +1,11 @@
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\bin\Debug\Sea.Service.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\bin\Debug\Sea.Service.pdb
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\obj\Debug\Sea.Service.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\obj\Debug\Sea.Service.pdb
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\bin\Debug\Sea.Core.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\bin\Debug\Sea.Data.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\bin\Debug\EntityFramework.dll
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\bin\Debug\Sea.Core.pdb
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\bin\Debug\Sea.Data.pdb
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\bin\Debug\EntityFramework.xml
+E:\PROGRAMMING\QUANTUM IT EXAM\StudentEnrollmentApp\Sea.Service\obj\Debug\Sea.Service.csprojResolveAssemblyReference.cache
